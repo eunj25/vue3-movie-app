@@ -121,7 +121,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
 .container {
   padding-top:40px;
   .poster{
@@ -218,11 +217,43 @@ export default {
       }
     }
   }
-    h3 {
-      font-family: 'Oswald', sans-serif;
-      text-transform: capitalize;
-      margin: 24px 0 6px;
-      font-size: 20px;
+  h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    margin: 24px 0 6px;
+    font-size: 20px;
+  }
+  @include media-breakpoint-down(xl) {
+    .poster {
+      width: 300px;
+      height: calc(300px * 3/2);
+      margin-right: 40px;
     }
+  }
+  @include media-breakpoint-down(lg) {
+    display: block;
+    .poster {
+      margin-bottom: 40px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .specs {
+      .title {
+        font-size: 50px;
+      }
+      .ratings {
+        .rating {
+          margin-top: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .skeletons {
+      display: block;
+    }
+    .movie-details {
+      display: block;
+    }
+  }
 }
 </style>

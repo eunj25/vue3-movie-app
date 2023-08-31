@@ -74,7 +74,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
 .container {
   display: flex;
   // gap: 10px;
@@ -85,11 +84,15 @@ export default {
       margin-right: 0;
     }
   }
+  input {
+    height: 50px;
+  }
   .selects {
     display: flex;
     gap: 10px;
     select {
       width: 120px;
+      height: 50px;
     }
   }
   .btn {
@@ -98,6 +101,23 @@ export default {
     font-weight: 700;
     color: $white;
     flex-shrink: 0; //flex 사용시 width크기가 줄어들지 않도록 방지
+  }
+  @include media-breakpoint-down(lg) {
+    display: block;
+    input {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .selects {
+      margin-right: 0;
+      margin-bottom: 10px;
+      select {
+        width: 100%;
+      }
+    }
+    .btn {
+      width: 100%;
+    }
   }
 }
 </style>
