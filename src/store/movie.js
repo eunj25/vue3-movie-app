@@ -1,6 +1,8 @@
 import axios from 'axios'
 import _uniqBy from 'lodash/uniqBy'
 
+const _defaultMessage = 'Search for the movie title!!'
+
 export default {
   // mpdule 옵션과 유사
   namespaced: true,
@@ -8,7 +10,7 @@ export default {
   // 상태(State)는 함수로 만들어서 객체 데이터를 반환해야 가변 이슈(데이터 불변성)가 발생하지 않습니다!
   state: ()=> ({
     movies: [],
-    message: 'Search for the movie title !!',
+    message: _defaultMessage,
     loading: false,
     theMovie: {}
   }),
@@ -24,6 +26,8 @@ export default {
     },
     resetMovies(state) {
       state.movies = []
+      state.message = _defaultMessage
+      state.loading = false
     }
   },
   // methods 옵션과 유사합니다.
