@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "dev": "webpack-dev-server --mode development",
+    "dev:netlify": "netlify dev",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -24,10 +25,12 @@
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.47.0",
     "eslint-plugin-vue": "^9.17.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
+    "netlify-cli": "^16.2.0",
     "postcss": "^8.4.27",
     "postcss-loader": "^7.3.3",
     "sass": "^1.64.2",

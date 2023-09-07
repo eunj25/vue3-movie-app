@@ -11,7 +11,8 @@
               v-model="$data[filter.name]"
               class="form-select">
         <option
-          v-if="filter.name === 'year'">
+          v-if="filter.name === 'year'"
+          value="">
           All Year
         </option>
         <option 
