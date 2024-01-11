@@ -66,11 +66,12 @@ export default {
               page
             })
             const { Search } = res.data
+            
             commit('updateState', {
-              movies: [
-                ...state.movies, 
-                ..._uniqBy(Search, 'imdbID')
-              ]
+              movies: _uniqBy([
+                ...state.movies,
+                ...Search
+              ], 'imdbID')
             })
           }
         }
